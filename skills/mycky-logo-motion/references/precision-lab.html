@@ -1,0 +1,15 @@
+<!doctype html><meta charset="utf-8"><title>Mycky precision recipes</title>
+<style>body{margin:24px;background:#f5f6fa;font:16px Arial;color:#141826}#frame{max-width:1100px}svg{width:100%;height:auto}input{width:70%}button{padding:8px 18px}</style>
+<h1>Precision recipes / v2.1</h1>
+<p>Generic teaching shapes. Read <a href="precision-refinements.md">the recipe and limits</a> before applying to customer artwork.</p>
+<div id="frame"></div><button id="play">Play</button> <input id="time" type="range" min="0" max="6" step="0.001" value="0"> <output id="clock"></output>
+<script src="../scripts/lesson-core.js"></script><script src="../scripts/precision-motion.cjs"></script><script src="../scripts/precision-lesson.cjs"></script>
+<script>
+const slider=document.querySelector('#time'),frame=document.querySelector('#frame'),clock=document.querySelector('#clock');
+let playing=false,last=0;
+function show(t){slider.value=t;frame.innerHTML=MyckyPrecisionLesson.svg(t);clock.textContent=t.toFixed(3)+'s';}
+slider.oninput=()=>{playing=false;document.querySelector('#play').textContent='Play';show(+slider.value);};
+document.querySelector('#play').onclick=()=>{if(+slider.value>=6)show(0);playing=!playing;document.querySelector('#play').textContent=playing?'Pause':'Play';last=performance.now();};
+function tick(now){if(playing){show(Math.min(6,+slider.value+(now-last)/1000));if(+slider.value>=6){playing=false;document.querySelector('#play').textContent='Play';}}last=now;requestAnimationFrame(tick);}
+show(0);requestAnimationFrame(tick);
+</script>

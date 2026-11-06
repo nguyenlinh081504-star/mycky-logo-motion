@@ -1,6 +1,6 @@
 ---
 name: mycky-logo-motion
-description: "Use when a user supplies a logo or reference video for letter-to-icon animation, asks for multiple logical morph/rotation formulas in the style of @mycky1508, or needs fixes for tangled strokes, lost counters, contour jumps, clone assembly, pacing, sharpness, or final MP4 delivery."
+description: "Use when Linh/Mycky supplies a logo or reference video for letter-to-icon animation, asks for multiple logical morph/rotation formulas in the style of @mycky1508, or needs fixes for tangled strokes, lost counters, contour jumps, clone assembly, pacing, sharpness, or final MP4 delivery."
 ---
 
 # Mycky Logo Motion — từ chữ gốc thành icon có logic
@@ -15,6 +15,12 @@ thành mọi icon đều đẹp. Mỗi nét phải có nguồn, đích và quá 
 [SVG laboratory](references/visual-lessons.html), xem video và ảnh được liên kết.
 Không chỉ đọc bảng công thức rồi tự nội suy cả contour. Đổi tốc độ một bản đã
 đạt thì không cần học lại các bài hình học.
+
+**Bổ sung v2.1 — công thức triển khai:** khi gặp clone +90° từ bản cha, nhảy
+coverage đầu morph, móc/khuyết strand, đầu bút xám, dịch chuyển nấc pixel hoặc
+chỉ tăng tốc một phase, đọc [precision refinements](references/precision-refinements.md).
+Có helper và test chạy được; giữ thứ tự riêng trong brief, không mặc định mọi
+logo phải morph trước clone hoặc clone trước morph.
 
 ## Cổng hình học cho mọi logo mới
 
@@ -55,11 +61,10 @@ không bao giờ lỗi; bắt buộc phát hiện và chặn lỗi trên chính 
 6. Giữ engine và source đang chạy; Motion Canvas 3.17.2 đã có thì không cài lại.
    Nếu chọn HyperFrames, đọc skill của plugin trước khi sửa composition. MP4 đặt
    trong HyperFrames là review clip, không gọi là morph vector native.
-7. Tôn trọng nơi lưu user chọn; ưu tiên D trên máy có ổ C thiếu chỗ. Đường dẫn
-   D trong ví dụ có thể thay bằng nơi skill thực sự được cài. Không giả định
-   junction hoặc cấu hình máy đã tồn tại; không sửa các skill khác để ép bật skill.
+7. Data/cache/output ưu tiên D. Skill tại `D:/Codex/skills/mycky-logo-motion`.
+   `.codex/skills` trên máy hiện trỏ ổ D. Không sửa các skill khác để ép bật skill.
 
-Phong cách mặc định từ các dự án Mycky: chữ/icon có quan hệ hình học rõ, ít hiệu ứng
+Phong cách mặc định từ lịch sử Linh: chữ/icon có quan hệ hình học rõ, ít hiệu ứng
 phụ, cao cấp, nhịp gọn, không bounce/yoyo tùy tiện. Giữ màu/artwork thực tế của
 logo mới; không ép mọi logo thành Jia Beauty hoặc nền trắng/đen nếu user khác.
 
@@ -77,8 +82,7 @@ $tool = 'D:/Codex/skills/mycky-logo-motion/scripts/run.ps1'
 ```
 
 - `doctor`: kiểm tra Python/OpenCV/FFmpeg đã có; không tự tải/cài. Vị trí runtime
-  ở `runtime.local.json` (không commit); có mẫu `runtime.example.json`. Ưu tiên
-  runtime/thư viện đang có, không tự tải hoặc cài lại.
+  ở `runtime.local.json`, không chứa secret. Chuyển máy thì sửa đường dẫn.
 - `logo`: đo **ink bbox**, tâm nét, thành phần và khoang âm; xuất mask/ảnh bbox.
   PNG alpha không bị coi nền trong suốt màu đen là khối đen. Auto không đúng thì
   dùng `--foreground dark|light|alpha`. SVG trả metadata; cần render bằng browser/
@@ -103,7 +107,7 @@ $tool = 'D:/Codex/skills/mycky-logo-motion/scripts/run.ps1'
 
 Có thể chạy `python scripts/logo_lab.py ...` trực tiếp. Cần NumPy/OpenCV/Pillow
 đã có. Dùng `MYCKY_PYTHON_DEPS`, `MYCKY_FFMPEG`, `MYCKY_FFPROBE` để chỉ runtime
-khác; launcher dùng runtime local nếu có, hoặc Python trên PATH. Không cài lại framework.
+khác; launcher dùng runtime local sẵn có trên máy Linh. Không cài lại framework.
 
 ## 3. Xem video và biến quan sát thành công thức
 
@@ -340,8 +344,11 @@ bốn góc hoặc full ring cùng lúc. Serif bắt đầu từ nút gắn, khô
 
 ## 8. Clone, pivot và xoay
 
-Morph xong → hold → căn góc/scale/vị trí nếu có → hold → clone trùng khít → tách/
-xoay. Không vừa morph vừa rotate khi brief khóa hai pha. Clone tạo một lần, không
+Nếu brief yêu cầu morph trước: morph xong → hold → căn góc/scale/vị trí nếu có →
+hold → clone trùng khít → tách/xoay. Nếu brief yêu cầu xoay chữ gốc dày trước:
+giữ hình gốc → lần lượt clone/xoay → dừng cả cụm → mới morph. Xem công thức
+clone từ cha đã dừng trong [precision refinements](references/precision-refinements.md).
+Không vừa morph vừa rotate khi brief khóa hai pha. Clone tạo một lần, không
 nhân lại mỗi renderAt. Nếu yêu cầu clone xong mới rút nét thì giữ nguyên nét lúc
 clone bắt đầu. Bản gốc không xoay khi user chỉ cho clone xoay.
 

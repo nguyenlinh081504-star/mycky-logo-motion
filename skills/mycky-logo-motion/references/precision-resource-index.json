@@ -1,0 +1,29 @@
+{
+  "version": "2.1",
+  "teaching_not_customer_artwork": true,
+  "source": [
+    "scripts/precision-lesson.cjs",
+    "scripts/precision-motion.cjs",
+    "scripts/lesson-core.js"
+  ],
+  "decoded_frames": 180,
+  "video": {
+    "width": 960,
+    "height": 540,
+    "fps": 30.0,
+    "fps_fraction": "30/1",
+    "duration": 6.0,
+    "declared_frames": 180,
+    "codec": "h264",
+    "profile": "High",
+    "pixel_format": "yuv420p",
+    "audio": false
+  },
+  "visual_review": "Six ordered samples at 0, 0.5, 1, 2, 3, 4.5s inspected: stable original, chained quarter-turns, connected ring prefix, separate rounded/float travel. Generic teaching art only.",
+  "browser_continuous_playback": "not certified by this renderer",
+  "files": {
+    "precision-contact.png": "c8a56840a8d8397f8eb2476bceb8074032b69831cc929267c17bcb0503b60aa6",
+    "precision-refinements.mp4": "10241130d937d224115ca41d85881f8575f231b01775819499133b3fe646add1",
+    "precision-refinements.png": "88577f7787dd6b7d82091bec7310f22a007a960a582d5ec1a5969da52103e731"
+  }
+}

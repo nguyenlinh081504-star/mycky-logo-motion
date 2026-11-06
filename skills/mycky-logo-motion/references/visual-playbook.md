@@ -189,3 +189,10 @@ Kiểm code giáo dục: `node scripts/test-visual-lessons.cjs`.
 Tái tạo media: `node scripts/render-lessons.cjs --playwright-module <module đã có>
 --browser-executable <Chrome/Chromium đã có> --ffmpeg <ffmpeg đã có> --out <D:/job>`.
 Không tải trình duyệt/framework mới khi runtime hiện có vẫn hoạt động.
+
+## Bổ sung precision v2.1
+
+Khi gặp clone +90° từ bản cha, coverage nhảy đầu morph, nét vẽ có đầu xám hoặc
+dịch chuyển bị nấc pixel, xem [công thức và code](precision-refinements.md) và
+[lab tương tác](precision-lab.html). Đây là bài bổ sung, các bài v2 vẫn
+giữ nguyên.

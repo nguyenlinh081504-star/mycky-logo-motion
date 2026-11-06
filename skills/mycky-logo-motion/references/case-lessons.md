@@ -1,4 +1,4 @@
-# Những bài học đã có từ các dự án Mycky
+# Những bài học đã có từ các dự án của Linh
 
 Nguồn: yêu cầu/sửa đổi trực tiếp trong chat và brief/source/QA local đã đọc. Đây
 là case-specific constraints, không áp tất cả lên logo mới. Brief V12/V14… có
@@ -18,6 +18,12 @@ thể là prototype raster; không gọi là vector đã nghiệm thu chỉ vì 
 | BLING BLING V19 | B→ribbon/đuôi cần bù visible geometry velocity; easing bậc cao có thể làm cảm giác chậm; tail phải mọc từ thân; subpixel coverage khác crossfade | không nhận 10-microsecond metric là frame nguồn; không kết luận 60fps là mượt; có răng cưa phải xem trace/coverage |
 | JIA V24–V26 | p=0 và p=0+ cùng raster; counter B ghép semantic góc thân/bowl, không global min(x,y); cleanup chỉ bridges; bảo toàn đáy B qua shrink; reparameterize visible union | số khoang/component PASS chưa chứng minh hình đẹp: user vẫn thấy nét rối khi counter corner bị kéo sai |
 | Xuất 2×/2,1× | phân biệt speed và supersampling; giữ cuối lấy frame hoàn thiện thực, thay hold cũ nếu user muốn đúng 1s; H264 High/yuv420p/faststart | không âm thầm kéo duration trở lại 8s; không thêm hold nếu user chỉ yêu cầu tăng tốc |
+| KANJO V4 + sửa nhịp | glyph riêng morph riêng; giảm lần nhích/dừng thừa theo sửa mới; entry và morph có duration độc lập | không coi mọi đoạn đều phải nhanh hơn khi user chỉ phàn nàn morph |
+| DR.SHE V2 | strand ownership đầy đủ trước lồng; cổ khuyết và cap có móc cần sửa seam/tangent cục bộ; morph xong mới assembly | không làm S co thành cục; không clamp mọi handle làm mất hook chủ đích |
+| FANTASHION V7 | fat glyph giữ nguyên qua ba lượt clone +90° từ cha đã dừng; xong mới morph; template source/cubic và coverage chung qua boundary | không áp quy tắc morph-trước-clone của logo khác; không ép module gần đối xứng thành giống hệt |
+| HOA ĐỎ V3 | projection arc-length liên tục, front 1px thay đầu xám rộng; float translation; group shrink giữ accent; hoa pop đúng một frame theo brief | không lấy hoa pop làm mặc định cho mọi accent; không cộng offset pixel-center cho vector gốc vô điều kiện |
+
+Công thức, code và giới hạn áp dụng: [precision refinements](precision-refinements.md).
 
 ## Chẩn đoán nhanh từ triệu chứng
 

@@ -5,6 +5,26 @@ có quan hệ hình học rõ, triển khai và tự kiểm tra chuyển động
 
 ## Có gì trong skill?
 
+### Cập nhật v2.1: công thức triển khai và kiểm thử
+
+- Clone +90° theo bản cha đã dừng, giữ chữ gốc dày trước morph khi brief yêu cầu.
+- Chia cubic chính xác, so coverage đầu morph, kiểm ownership/tangent cục bộ.
+- Draw-on nhiều cubic theo tổng arc-length; đầu nét sắc, không feather xám rộng.
+- Dịch artwork theo tọa độ float với premultiplied alpha; giữ nguyên dấu/chân chữ.
+- Time-map riêng một phase, rồi tăng tốc toàn phim; không tự cộng hold cuối.
+- Thêm một video giáo dục 6s, ảnh và lab tua tương tác dùng chung source; giữ
+  nguyên 9 bài v2. Không đưa thêm artwork/video khách hàng lên kho.
+
+[Đọc công thức v2.1](skills/mycky-logo-motion/references/precision-refinements.md)
+· [Mở source lab](skills/mycky-logo-motion/references/precision-lab.html)
+· [Xem video minh họa](skills/mycky-logo-motion/assets/lessons/precision-refinements.mp4)
+
+Kiểm helper mới: `node scripts/test-precision-motion.cjs` và
+`python scripts/test_precision_raster.py` tại thư mục skill. Python dùng runtime
+đã cấu hình; không cài lại thư viện. Test toán học không thay nghiệm thu hình ảnh.
+
+### Nội dung nền tảng
+
 - 42 cơ chế có thể kết hợp: thu nét, uốn bowl/đuôi, ghép trụ, đan chữ, vẽ cung,
   nhân bản, xoay/lật, lắp module, thu icon và hiện wordmark.
 - Phân tích từ 15 video tổng hợp của [@mycky1508](https://www.tiktok.com/@mycky1508),
