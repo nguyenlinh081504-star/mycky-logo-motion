@@ -1,0 +1,197 @@
+{
+  "purpose": "Illustrated semantic counter mapping; polygon example, not a native cubic final render",
+  "source": "assets/examples/B-source.png",
+  "target": "assets/examples/B-target.png",
+  "topology_samples": 101,
+  "components": [
+    1
+  ],
+  "holes": [
+    2
+  ],
+  "contours": [
+    {
+      "contour": 0,
+      "labels": [
+        "stem_top",
+        "stem_bottom",
+        "lower_baseline_bowl",
+        "lower_bowl_right",
+        "waist",
+        "upper_bowl_right",
+        "upper_cap_bowl"
+      ],
+      "source_anchor_xy": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          501.0
+        ],
+        [
+          231.0,
+          501.0
+        ],
+        [
+          382.0,
+          365.0
+        ],
+        [
+          268.0,
+          237.0
+        ],
+        [
+          358.0,
+          125.0
+        ],
+        [
+          220.0,
+          0.0
+        ]
+      ],
+      "target_anchor_xy": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          634.0
+        ],
+        [
+          250.0,
+          634.0
+        ],
+        [
+          497.0,
+          436.0
+        ],
+        [
+          272.0,
+          235.0
+        ],
+        [
+          378.0,
+          124.0
+        ],
+        [
+          200.0,
+          0.0
+        ]
+      ],
+      "paired_points": 4249
+    },
+    {
+      "contour": 1,
+      "labels": [
+        "inner_stem_top",
+        "upper_counter_cap_bowl",
+        "upper_counter_right",
+        "upper_counter_waist",
+        "inner_stem_lower"
+      ],
+      "source_anchor_xy": [
+        [
+          89.0,
+          70.0
+        ],
+        [
+          205.0,
+          70.0
+        ],
+        [
+          269.0,
+          140.0
+        ],
+        [
+          204.0,
+          209.0
+        ],
+        [
+          90.0,
+          212.0
+        ]
+      ],
+      "target_anchor_xy": [
+        [
+          68.0,
+          18.0
+        ],
+        [
+          177.0,
+          17.0
+        ],
+        [
+          310.0,
+          126.0
+        ],
+        [
+          245.0,
+          226.0
+        ],
+        [
+          69.0,
+          333.0
+        ]
+      ],
+      "paired_points": 1843
+    },
+    {
+      "contour": 2,
+      "labels": [
+        "lower_counter_stem_top",
+        "lower_counter_waist",
+        "lower_counter_right",
+        "lower_counter_floor_bowl",
+        "lower_counter_stem_bottom"
+      ],
+      "source_anchor_xy": [
+        [
+          89.0,
+          278.0
+        ],
+        [
+          210.0,
+          278.0
+        ],
+        [
+          291.0,
+          356.0
+        ],
+        [
+          210.0,
+          431.0
+        ],
+        [
+          90.0,
+          432.0
+        ]
+      ],
+      "target_anchor_xy": [
+        [
+          68.0,
+          394.0
+        ],
+        [
+          249.0,
+          252.0
+        ],
+        [
+          421.0,
+          422.0
+        ],
+        [
+          215.0,
+          616.0
+        ],
+        [
+          69.0,
+          616.0
+        ]
+      ],
+      "paired_points": 2121
+    }
+  ]
+}

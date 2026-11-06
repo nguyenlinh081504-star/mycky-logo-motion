@@ -1,0 +1,11 @@
+{
+  "status": "EXAMPLE_SCHEMA_REPLACE_WITH_MEASURED_DATA",
+  "output": {"width": 1080, "height": 1920, "fps": 60, "duration_s": 8, "frames": 480, "codec": "h264", "pixel_format": "yuv420p"},
+  "authority": {"latest_user_request": "", "logo_asset": "", "source_glyphs": [], "reference_video": "", "reference_role": "rhythm_and_observed_formula_not_target_geometry"},
+  "formula": {"ids": [], "reason_geometry_fits": "", "observed_evidence": [], "engineering_inferences": [], "unknowns": []},
+  "nodes": [{"id": "glyph-A", "source_path": "", "target_path": "", "source_counters": null, "target_counters": null, "landmarks": [], "pivot_local": null, "rotation_axis": null, "angle_start_deg": 0, "angle_end_deg": 0, "parent": "icon-group"}],
+  "stroke_ancestry": [{"source_node": "glyph-A", "source_region": "stem/bowl/hook/counter to be measured", "action": "deform/retract/draw/clone/rotate", "target_region": "", "preserved_connections": [], "ownership_at_intersection": ""}],
+  "phases": [{"id": "entry", "start_frame": 0, "end_frame_exclusive": null, "nodes": ["glyph-A"], "allowed_properties": ["position"], "must_be_visible": [], "must_be_absent": [], "hold_reason": null}],
+  "qa": {"critical_windows": [], "topology_assertions": [], "endpoint_registered_artwork": "", "morph_start_continuity": "PENDING", "intersections": "PENDING", "clone_order": "PENDING", "playback_1x": "PENDING", "playback_slow": "PENDING", "decoded_final_video": "PENDING"},
+  "delivery": {"final_file": "", "only_user_requested_artifacts": true}
+}

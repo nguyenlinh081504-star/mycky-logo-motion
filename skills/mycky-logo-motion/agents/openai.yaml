@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mycky Logo Motion"
+  short_description: "Phân tích video mẫu và biến chữ thành logo có logic"
+  default_prompt: "Dùng $mycky-logo-motion để đọc logo và video mẫu, đề xuất nhiều công thức biến hình có căn cứ, rồi triển khai và kiểm tra chuyển động theo yêu cầu."

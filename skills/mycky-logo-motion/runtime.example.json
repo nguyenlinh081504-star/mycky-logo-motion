@@ -1,0 +1,7 @@
+{
+  "python": "D:/your-existing-runtime/python.exe",
+  "python_deps": [],
+  "ffmpeg": "D:/your-existing-tools/ffmpeg.exe",
+  "ffprobe": "D:/your-existing-tools/ffprobe.exe",
+  "scratch_root": "D:/logo-motion-work"
+}

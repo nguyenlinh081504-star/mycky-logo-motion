@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+runtime.local.json
+.venv/
+node_modules/
+outputs/
+*.mp4
+*.mov
+.env
+.env.*

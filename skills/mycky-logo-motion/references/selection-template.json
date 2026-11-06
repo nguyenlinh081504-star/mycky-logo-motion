@@ -1,0 +1,35 @@
+{
+  "instructions": "Codex must inspect the new artwork, fill measured facts, render/review difficult motion, and replace pending fields with evidence. This file is deliberately not pre-approved. Do not copy scores/checks from another logo.",
+  "facts": {
+    "artwork": "REPLACE with absolute path",
+    "repeat_structure": "unknown",
+    "repeat_structure_allowed_values": ["verified", "absent", "unknown"],
+    "repeat_fit_evidence": "PENDING: overlay and contour fit after registration",
+    "counter_and_junction_invariants": [],
+    "required_formula_ids": [],
+    "forbidden_formula_ids": []
+  },
+  "candidates": [
+    {
+      "id": "candidate-1",
+      "formula_ids": ["F02"],
+      "why_this_logo": "PENDING: map each source stroke/counter to target",
+      "checks": {
+        "artwork_identity": null,
+        "topology": null,
+        "ancestry": null,
+        "connectivity": null,
+        "phase_order": null,
+        "no_spurious_strokes": null
+      },
+      "scores": {
+        "endpoint_fidelity": {"value": null, "basis": ""},
+        "anatomical_continuity": {"value": null, "basis": ""},
+        "visual_cleanliness": {"value": null, "basis": ""},
+        "pacing": {"value": null, "basis": ""},
+        "reference_style": {"value": null, "basis": ""}
+      },
+      "visual_review": {"status": "pending", "evidence": []}
+    }
+  ]
+}

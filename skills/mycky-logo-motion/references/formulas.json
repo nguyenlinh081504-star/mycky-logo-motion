@@ -1,0 +1,1374 @@
+{
+  "version": 1,
+  "language": "vi",
+  "count": 42,
+  "claim_boundary": "Sampled visible states/order are observed; construction steps are engineering reconstruction, not original author code. See channel-study for dense review and uncertainties.",
+  "formulas": [
+    {
+      "id": "F01",
+      "name": "Thu thân và mở serif",
+      "features": [
+        "block",
+        "serif",
+        "stem"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7503539753367686418",
+        "window_approx_s": [
+          8.7,
+          12.3
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7503539753367686418"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Giữ tim và góc chân thân",
+        "Nội suy độ dày hai biên về profile đích",
+        "Mở serif từ đúng đầu thân, không đổi toàn bbox"
+      ],
+      "avoid": "Không bóp méo toàn chữ hoặc thay font",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F02",
+      "name": "Biến đổi bụng và khoang âm",
+      "features": [
+        "B",
+        "P",
+        "D",
+        "R",
+        "counters"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7704818329537531157",
+        "window_approx_s": [
+          8,
+          11.5
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7704818329537531157"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Tách outer và từng counter",
+        "Ghép góc trong thân, eo, cực trị cùng nghĩa",
+        "Nội suy từng section arc-length rồi compound fill"
+      ],
+      "avoid": "Không anchor toàn contour bằng min(x,y)",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F03",
+      "name": "Mở móc chữ J",
+      "features": [
+        "J",
+        "hook",
+        "U"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7704818329537531157",
+        "window_approx_s": [
+          8,
+          11.5
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7704818329537531157"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Khóa đầu thân và nút bắt đầu móc",
+        "Mở tim cong của móc, co bề dày theo đích",
+        "Kéo mũi từ mép móc và settle đúng silhouette"
+      ],
+      "avoid": "Không sinh đầu đuôi thành đảo rời",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F04",
+      "name": "V thành module cánh",
+      "features": [
+        "V",
+        "petal"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7528393194380479751",
+        "window_approx_s": [
+          0,
+          4.1
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7528393194380479751"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Ghép mỗi chân V với một biên cánh",
+        "Uốn đáy V thành nút gắn chung",
+        "Hoàn tất module trước khi clone quanh tâm"
+      ],
+      "avoid": "Không vừa chia vụn V vừa tráo cả icon",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": true
+    },
+    {
+      "id": "F05",
+      "name": "X thành dải giao",
+      "features": [
+        "X",
+        "ribbon"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7522084525472566536",
+        "window_approx_s": [
+          12.5,
+          16.3
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7522084525472566536"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Gán hai nét chéo thành hai ribbon",
+        "Chuyển tim/width có điểm gắn tại giao",
+        "Giữ lớp trên-dưới có chủ đích và profile taper"
+      ],
+      "avoid": "Không để overlap phình thành đĩa đen",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F06",
+      "name": "S thành module xoáy",
+      "features": [
+        "S",
+        "petal",
+        "rotation"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7503918444291575048",
+        "window_approx_s": [
+          0,
+          4
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7503918444291575048"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Nhận hai cung và eo chữ S",
+        "Uốn đuôi/đầu về các đầu module đích",
+        "Giữ eo, hoàn tất module rồi clone radial"
+      ],
+      "avoid": "Không co S thành blob rồi bật ra module",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": true
+    },
+    {
+      "id": "F07",
+      "name": "C thành cung ôm",
+      "features": [
+        "C",
+        "arc"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7489809040021687557",
+        "window_approx_s": [
+          5.1,
+          9
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7489809040021687557"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Ghép đầu cung trên/dưới",
+        "Chỉnh bán kính và taper quanh chữ còn lại",
+        "Giữ khe mở đúng artwork khi lắp icon"
+      ],
+      "avoid": "Không đóng khe thành O nếu target còn hở",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F08",
+      "name": "O thành vòng bao",
+      "features": [
+        "O",
+        "ring",
+        "counter"
+      ],
+      "evidence": {
+        "type": "local_case",
+        "case": "OHANA"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Ghép outer và inner riêng theo arc",
+        "Di chuyển cùng một local transform vào tâm",
+        "Nội suy cả hai biên, kiểm bề dày tối thiểu"
+      ],
+      "avoid": "Không fill lỗ rỗng để che lỗi",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F09",
+      "name": "N rút đường chéo",
+      "features": [
+        "N",
+        "diagonal",
+        "stem"
+      ],
+      "evidence": {
+        "type": "local_case",
+        "case": "NAIL_ART_THEORY"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Tách diagonal theo hai nút gắn có chủ",
+        "Rút nét dọc tim chéo về phía được brief chỉ định",
+        "Giữ trụ, chỉ morph trụ sau placement ổn định"
+      ],
+      "avoid": "Không để mấu tam giác mắc ở chân",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F10",
+      "name": "A mảnh dần crossbar",
+      "features": [
+        "A",
+        "crossbar"
+      ],
+      "evidence": {
+        "type": "local_case",
+        "case": "NAIL_ART_THEORY"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Xác định tim thanh ngang và hai nút chân A",
+        "Giảm width quanh tim trong khi hai chân giữ liên kết",
+        "Cho width về 0 ở pha giản lược được phép"
+      ],
+      "avoid": "Không dùng hình chữ nhật trắng cắt chân A",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F11",
+      "name": "H uốn liên kết",
+      "features": [
+        "H",
+        "bridge"
+      ],
+      "evidence": {
+        "type": "local_case",
+        "case": "OHANA"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Thân trái→móc dưới, thân phải→cung trên",
+        "Bridge endpoints phụ thuộc vị trí hai thân ở mỗi frame",
+        "Morph width và tiếp tuyến, giữ một component"
+      ],
+      "avoid": "Không tween bridge rời hai thân",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F12",
+      "name": "R đổi bụng và chân xiên",
+      "features": [
+        "R",
+        "bowl",
+        "leg"
+      ],
+      "evidence": {
+        "type": "local_case",
+        "case": "CARINR"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Ghép eo và nhánh chân theo target",
+        "Đổi bowl và leg cùng một progress",
+        "Nếu user cho phép, fade riêng stem đồng thời hai nhánh morph"
+      ],
+      "avoid": "Fade stem là ngoại lệ case, không quyền fade mọi morph",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F13",
+      "name": "K kéo swash",
+      "features": [
+        "K",
+        "swash"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7529460387142487303",
+        "window_approx_s": [
+          13.7,
+          17.2
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7529460387142487303"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Khóa junction nhánh K với thân",
+        "Kéo chân dưới theo cung dài đích",
+        "Nội suy tangent/width, taper cuối nối liền"
+      ],
+      "avoid": "Không bật cả swash dài ngay từ đầu",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F14",
+      "name": "Y giãn nhánh và đuôi",
+      "features": [
+        "Y",
+        "fork",
+        "swash"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7529460387142487303",
+        "window_approx_s": [
+          0,
+          4.2
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7529460387142487303"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Giữ junction ba nhánh",
+        "Nhánh trên/thân dưới chuyển sang profile thư pháp",
+        "Đuôi/loop phát triển từ đầu nguồn trước vòng bao"
+      ],
+      "avoid": "Không tách nhánh thành vật thể không nguồn",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F15",
+      "name": "e thành cặp vòng",
+      "features": [
+        "e",
+        "loop",
+        "clone"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7522084525472566536",
+        "window_approx_s": [
+          0,
+          4
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7522084525472566536"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Giữ lỗ và khe mở của e",
+        "Morph loop thành module chính xác",
+        "Clone/đặt lệch cặp module khi đã ổn định"
+      ],
+      "avoid": "Không tự đóng khe hoặc xóa counter",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": true
+    },
+    {
+      "id": "F16",
+      "name": "Dùng chung trục",
+      "features": [
+        "CJ",
+        "ET",
+        "DR",
+        "FP",
+        "shared-stem"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7522084525472566536",
+        "window_approx_s": [
+          4.3,
+          8.1
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7522084525472566536"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Đo hai trục sẽ dùng chung",
+        "Chữ vào và dừng rồi translate về registration",
+        "Gộp ownership vùng trụ, morph những nhánh còn lại"
+      ],
+      "avoid": "Không cộng alpha làm trụ đậm kép",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F17",
+      "name": "Đan hai chữ",
+      "features": [
+        "DC",
+        "SK",
+        "SN",
+        "interlock"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7503918444291575048",
+        "window_approx_s": [
+          8.5,
+          12
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7503918444291575048"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Ghép các vòng vào đúng vị trí tương quan",
+        "Morph mỗi glyph riêng và giữ ancestry",
+        "Chỉ tạo giao tại các nút có trên-dưới trong artwork"
+      ],
+      "avoid": "Không đổi ownership giữa chừng gây nháy",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F18",
+      "name": "Rút nét trùng trước ghép",
+      "features": [
+        "MK",
+        "KM",
+        "KA",
+        "EB",
+        "shared-stroke"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7503918444291575048",
+        "window_approx_s": [
+          4.2,
+          8.3
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7503918444291575048"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Đánh nhãn phần trùng ở hai glyph",
+        "Rút phần dư theo tim/nút gắn, giữ phần chủ",
+        "Ghép thân chung và settle đúng artwork"
+      ],
+      "avoid": "Không xóa nét chỉ vì khung giữa nhìn rối mà chưa xác định chủ",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F19",
+      "name": "Đặt chéo rồi morph",
+      "features": [
+        "JB",
+        "NA",
+        "placement"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7704818329537531157",
+        "window_approx_s": [
+          8,
+          11.5
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7704818329537531157"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Hai chữ vào nhận diện được và giữ",
+        "Translate chéo đến staging đã register, scale theo brief",
+        "Hold rồi bắt đầu deformation của từng chữ"
+      ],
+      "avoid": "Không trộn placement với morph khi brief tách pha",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F20",
+      "name": "Một chữ phát triển hai nhánh",
+      "features": [
+        "branch",
+        "ribbon",
+        "V"
+      ],
+      "evidence": {
+        "type": "local_case",
+        "case": "VENUS_NAIL"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Định nghĩa ancestry hai nhánh từ hai miền nguồn",
+        "Nắn tim và width liên tục đến swash/trụ",
+        "Duy trì junction trước khi serif/vòng phụ vẽ"
+      ],
+      "avoid": "Không cắt chữ thành nhiều bitmap vụn",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F21",
+      "name": "Clone song song lệch nhau",
+      "features": [
+        "J",
+        "parallel",
+        "clone"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7651116514325581077",
+        "window_approx_s": [
+          12.9,
+          16.5
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7651116514325581077"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Hoàn thiện glyph/module gốc",
+        "Clone cùng asset, size và transform trùng khít",
+        "Tách theo offset song song, không thay anatomy"
+      ],
+      "avoid": "Không clone dạng khác hoặc tạo đậm nét lúc chồng",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": true
+    },
+    {
+      "id": "F22",
+      "name": "Clone xoay phẳng nửa vòng",
+      "features": [
+        "L",
+        "T",
+        "half-turn"
+      ],
+      "evidence": {
+        "type": "local_case",
+        "case": "LUMI"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Fit module gốc với hai nửa target",
+        "Freeze original; clone tại cùng pivot",
+        "Quay Z đúng 180° một chiều và translate được phép"
+      ],
+      "avoid": "Không nhầm xoay phẳng với flip phản chiếu",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": true
+    },
+    {
+      "id": "F23",
+      "name": "Clone lật trục Y một lần",
+      "features": [
+        "G",
+        "flip"
+      ],
+      "evidence": {
+        "type": "local_case",
+        "case": "GX_STUDIO"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Styled glyph ổn định rồi clone đủ nét",
+        "Original rotation=0, clone theta 0→pi",
+        "Chiếu x theo cos(theta), hai tâm tới đúng registration"
+      ],
+      "avoid": "Không yoyo, xoay cả hai hoặc đổi hình khi chính diện",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": true
+    },
+    {
+      "id": "F24",
+      "name": "Radial ba module",
+      "features": [
+        "radial",
+        "threefold"
+      ],
+      "evidence": {
+        "type": "engineering_variant",
+        "family": "radial-family"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Chứng minh target có ba module thật",
+        "Fit pivot và theta=0,120,240° tĩnh",
+        "Clone tuần tự và quay theo một hướng"
+      ],
+      "avoid": "Biến thể suy luận: không nhận là đã quan sát bậc 3 nếu chưa đếm",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": true
+    },
+    {
+      "id": "F25",
+      "name": "Radial bốn module",
+      "features": [
+        "S",
+        "H",
+        "R",
+        "radial"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7519870521782144263",
+        "window_approx_s": [
+          0,
+          4
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7519870521782144263"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Morph một module đạt silhouette",
+        "Đo tâm chung và fit các bản ở 90°",
+        "Clone theo thứ tự, quản lý overlap ở tâm"
+      ],
+      "avoid": "Không đẻ đủ icon cùng lúc bằng tráo target",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": true
+    },
+    {
+      "id": "F26",
+      "name": "Hai module khóa xoay lệch",
+      "features": [
+        "T",
+        "e",
+        "paired"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7651116514325581077",
+        "window_approx_s": [
+          4.3,
+          8
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7651116514325581077"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Morph module đầu có độ cong cần thiết",
+        "Clone đặt trùng và xác định góc/pivot từ artwork",
+        "Quay/tách đúng pha đến union đích"
+      ],
+      "avoid": "Trục/góc chưa thấy rõ phải xem dày hơn, không đoán từ 2 frame",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": true
+    },
+    {
+      "id": "F27",
+      "name": "Phát triển vòng từ đầu nét",
+      "features": [
+        "ring",
+        "draw",
+        "TJ"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7651116514325581077",
+        "window_approx_s": [
+          17.2,
+          20.8
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7651116514325581077"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Chọn đúng startpoint gắn vào trục",
+        "Tích phân arc-length qua các cubic",
+        "Reveal liên tục theo chiều được thấy/brief"
+      ],
+      "avoid": "Không bật full ring hoặc vẽ lộ qua vùng giao",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F28",
+      "name": "Một bút qua chuỗi loop",
+      "features": [
+        "calligraphy",
+        "one-stroke"
+      ],
+      "evidence": {
+        "type": "local_case",
+        "case": "THE_PHIA"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Chuỗi cubic có order và junction liên tục",
+        "Tốc độ theo arc toàn chuỗi, cắt Bézier tại bút",
+        "Giao miền reveal với silhouette variable-width"
+      ],
+      "avoid": "Không lộ phần chưa tới vì bút/mask quá rộng",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F29",
+      "name": "Serif/trụ vẽ từ nút gắn",
+      "features": [
+        "serif",
+        "stem",
+        "draw"
+      ],
+      "evidence": {
+        "type": "local_case",
+        "case": "PHONG_LAN"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Đo nút gắn trên trục đã hình thành",
+        "Reveal theo đúng hướng top-down hoặc arc brief",
+        "Giữ path đã vẽ và profile chiều dày nguồn"
+      ],
+      "avoid": "Không hiện một đốm black rời trước stroke",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F30",
+      "name": "Khoang âm thành silhouette",
+      "features": [
+        "Q",
+        "D",
+        "negative-space"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7529460387142487303",
+        "window_approx_s": [
+          4.5,
+          8.4
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7529460387142487303"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Cố định outer letter theo target",
+        "Morph inner contour đến silhouette có sẵn trong artwork",
+        "Thêm chi tiết khuôn mặt/accent đúng pha được thấy"
+      ],
+      "avoid": "Không bịa khuôn mặt nếu target không có",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F31",
+      "name": "B thành ribbon có đuôi",
+      "features": [
+        "B",
+        "ribbon",
+        "tail"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7704818329537531157",
+        "window_approx_s": [
+          11.6,
+          15.4
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7704818329537531157"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Gán hai bowl/counter vào các miền ribbon đích",
+        "Thu stem và uốn eo liên tục",
+        "Đuôi dài mọc theo cung từ thân, bù geometry velocity"
+      ],
+      "avoid": "Topology đổi có chủ ý phải kiểm riêng, không hứa giữ hai lỗ nếu target không có",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F32",
+      "name": "Cleanup cầu nối sau morph",
+      "features": [
+        "JB",
+        "cleanup"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7704818329537531157",
+        "window_approx_s": [
+          8,
+          11.5
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7704818329537531157"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Đăng ký target trước khi morph kết thúc",
+        "Chỉ định mask/path cầu tạm ngoài official",
+        "Rút từng cầu, bảo vệ thân và đáy B"
+      ],
+      "avoid": "Không morph toàn icon để dọn, không mất rồi mọc lại",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F33",
+      "name": "Ảnh ý niệm thành tim nét",
+      "features": [
+        "photo",
+        "yoga",
+        "cotton",
+        "coffee"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7597043483693649173",
+        "window_approx_s": [
+          0,
+          15.4
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7597043483693649173"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Nhận pose/contour thị giác liên quan logo",
+        "Vẽ tim nét bám điểm hình học ý niệm",
+        "Giảm chi tiết ảnh theo chỉ đạo rồi giữ icon thật"
+      ],
+      "avoid": "Chỉ khi user muốn; không tự thêm ảnh vào concept chữ",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F34",
+      "name": "Accent sau khớp icon",
+      "features": [
+        "star",
+        "diamond",
+        "crown"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7528833141037960455",
+        "window_approx_s": [
+          8.5,
+          12.3
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7528833141037960455"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Lấy silhouette accent gốc",
+        "Đợi phase icon/cung hoàn thành theo brief",
+        "Reveal tại đúng local anchor, không bay từ tâm khác"
+      ],
+      "avoid": "Thời điểm theo từng case; không mặc định sao cuối phim",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F35",
+      "name": "Group shrink giữ bố cục",
+      "features": [
+        "shrink",
+        "lockup"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7704818329537531157",
+        "window_approx_s": [
+          9.8,
+          11.5
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7704818329537531157"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Đưa icon và accent vào cùng parent",
+        "Nội suy uniform scale + position của parent",
+        "Chỉ sau settle mới reveal name"
+      ],
+      "avoid": "Không dịch sao/từng phần độc lập làm đổi lockup",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F36",
+      "name": "Tên hiện cả cụm",
+      "features": [
+        "wordmark",
+        "instant"
+      ],
+      "evidence": {
+        "type": "local_case",
+        "case": "GX_STUDIO"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Dùng artwork gốc tên thương hiệu",
+        "Set visibility toàn cụm ở thời điểm đã chỉ định",
+        "Giữ logo đủ thời gian xem"
+      ],
+      "avoid": "Đây là sửa user cho case GX, không ép mọi wordmark",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F37",
+      "name": "Chữ uốn thành dải sóng song hành",
+      "features": [
+        "N",
+        "n",
+        "W",
+        "wave"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7489809040021687557",
+        "window_approx_s": [
+          9.3,
+          14.4
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7489809040021687557"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Nắn đường sống N/n/W thành module wave có ancestry",
+        "Giữ module hoàn chỉnh một nhịp trước clone",
+        "Clone và quay/tách theo target để đặt cặp song hành; kiểm axis bằng đoạn dày"
+      ],
+      "avoid": "Không đoán flip-axis từ frame cuối; quan sát đoạn tách",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": true
+    },
+    {
+      "id": "F38",
+      "name": "Chữ và đuôi thành infinity",
+      "features": [
+        "S",
+        "Q",
+        "infinity"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7651116514325581077",
+        "window_approx_s": [
+          0,
+          4
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7651116514325581077"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Giữ S và tail Q; giản lược bowl Q chỉ nếu concept mới cho phép",
+        "Hold S + tail rồi nắn/reorient S thành hai cung nằm ngang",
+        "Gắn tail vào vòng phải; xử lý điểm nối cục bộ, không đổi cả biểu tượng"
+      ],
+      "avoid": "Không mô tả sai rằng S và toàn Q cùng morph; fade bowl Q trong mẫu không cho phép fade che lỗi logo mới",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F39",
+      "name": "Khung chữ nhật từ trụ chữ",
+      "features": [
+        "YC",
+        "frame",
+        "rectangular"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7489809040021687557",
+        "window_approx_s": [
+          0,
+          4.5
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7489809040021687557"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Morph/ghép hai glyph tạo trục trung tâm",
+        "Phát triển phần khung từ nút trụ theo artwork",
+        "Chốt các đoạn thẳng với junction chính xác"
+      ],
+      "avoid": "Không thêm rectangle trang trí nếu target không có",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F40",
+      "name": "Radial k module theo logo",
+      "features": [
+        "V",
+        "petal",
+        "radial"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7526528856900046088",
+        "window_approx_s": [
+          4.1,
+          7.7
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7526528856900046088"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Đếm module/pivot bằng artwork, không cố định k=4",
+        "Fit theta_j=theta0+2pi*j/k và ownership",
+        "Nhân tuần tự; quay/đặt đúng bố cục cuối"
+      ],
+      "avoid": "Không dùng cùng một số cánh cho mọi logo",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": true
+    },
+    {
+      "id": "F41",
+      "name": "Ghép theo lưới vuông góc",
+      "features": [
+        "LTT",
+        "grid",
+        "monoline"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7489809040021687557",
+        "window_approx_s": [
+          20.3,
+          24.5
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7489809040021687557"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Đo trục x/y, khoảng cách và width thật",
+        "Nắn chữ thành tim nét vuông góc có ancestry",
+        "Ghép trụ dùng chung rồi vẽ vòng nếu có"
+      ],
+      "avoid": "Không làm tròn tất cả corner hoặc đổi tracking đích",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    },
+    {
+      "id": "F42",
+      "name": "Ba chữ dùng chung diagonal",
+      "features": [
+        "NYX",
+        "ARN",
+        "triple"
+      ],
+      "evidence": {
+        "type": "tiktok_visual_states",
+        "video_id": "7489809040021687557",
+        "window_approx_s": [
+          15.2,
+          19.5
+        ],
+        "url": "https://www.tiktok.com/@mycky1508/video/7489809040021687557"
+      },
+      "requirements": [
+        "Có artwork đích đúng và nhận diện anatomy phù hợp",
+        "Fit tĩnh và kiểm tra topology trước khi dùng công thức"
+      ],
+      "implementation": [
+        "Đánh nhãn nét chéo có thể dùng chung ở từng glyph",
+        "Rút phần trùng theo ownership trước khi lồng",
+        "Đặt ba chữ và serif về registration của target"
+      ],
+      "avoid": "Không ép ba font gần giống thành icon rồi coi là exact",
+      "acceptance": [
+        "Khớp hai endpoint với artwork đã register",
+        "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
+        "Xem playback và decoded frames; không chỉ dùng numerical PASS"
+      ],
+      "requires_repeated_module": false
+    }
+  ]
+}

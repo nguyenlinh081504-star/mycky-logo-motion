@@ -1,0 +1,4 @@
+# Only needed for the optional measurement scripts. Reuse installed packages.
+numpy>=1.24
+Pillow>=10
+opencv-python>=4.8
