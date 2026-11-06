@@ -124,6 +124,13 @@ class SelectionTests(unittest.TestCase):
         self.assertEqual(result['best_tested_candidate'],'reviewed')
 
 class ExportTests(unittest.TestCase):
+    def test_empty_reference_decode_is_a_failure(self):
+        from unittest.mock import patch,Mock
+        cap=Mock();cap.read.return_value=(False,None)
+        with tempfile.TemporaryDirectory(prefix='mycky-empty-',dir=lab.CONFIG.get('scratch_root')) as directory:
+            args=Namespace(input='fixture.mp4',out=directory,window=None,crop=None,sample_fps=2)
+            with patch.object(lab,'probe',return_value={'fps':60.,'duration':1.}),patch.object(lab,'open_video_capture',return_value=cap):
+                with self.assertRaisesRegex(ValueError,'No evidence frames decoded'):lab.analyze_reference(args)
     def test_hold_uses_completed_frame_not_frame_before_completion(self):
         with tempfile.TemporaryDirectory(prefix='mycky-hold-',dir=lab.CONFIG.get('scratch_root')) as directory:
             source=Path(directory)/'input.mp4';target=Path(directory)/'out.mp4'

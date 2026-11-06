@@ -1,0 +1,91 @@
+<!doctype html><html lang="vi"><meta charset="utf-8"><title>Mycky — Bézier motion laboratory</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#e7e4de;font-family:Arial,sans-serif;color:#141414}#frame{width:960px;height:540px;background:#f7f5ef;position:relative;overflow:hidden}header{position:absolute;left:30px;top:25px;right:30px}small{font-size:11px;letter-spacing:2px;color:#62625b}h1{font-size:25px;margin:8px 0}#desc{font-size:14px;margin:0;line-height:1.4}svg{position:absolute;left:0;top:112px;width:960px;height:350px}.caption{position:absolute;left:30px;right:30px;bottom:28px;border-top:1px solid #d7d5cb;padding-top:10px;font-size:14px;line-height:1.4}.badge{position:absolute;right:30px;top:28px;font-size:12px;color:#62625b}#controls{width:960px;padding:18px;display:flex;gap:12px;align-items:center}select,button{padding:8px}input{width:310px}.render #controls{display:none}.label{font-size:13px;fill:#62625b}.mono{font-family:monospace}.hint{font-size:11px;fill:#777}body.render{background:white}
+</style>
+<div id="frame"><header><small>MYCKY / VECTOR MOTION — BÀI GIẢNG CÓ CODE</small><h1 id="title"></h1><p id="desc"></p></header><span class="badge" id="clock"></span><svg viewBox="0 0 960 350" id="art"></svg><div class="caption" id="caption"></div></div>
+<div id="controls"><select id="lesson"><option value="counter">01 · Hai khoang âm</option><option value="interweave">02 · Giao nét có chủ</option><option value="clone">03 · Chỉ clone xoay</option><option value="draw">04 · Bút đi theo cung</option><option value="radial">05 · Module rồi radial</option><option value="retract">06 · Rút nét phụ N/A</option><option value="placement">07 · Đặt chữ rồi morph</option></select><button id="play">Phát / dừng</button><input id="seek" type="range" min="0" max="6" step="0.016667" value="0"><label><input type="checkbox" id="debug" style="width:auto" checked>Phân vai nét</label></div>
+<section id="reference-library" style="width:960px;padding:20px 30px;background:#f7f5ef;line-height:1.6">
+<h2>Video mẫu thật và ca cần loại</h2><p>Học nhịp/cơ chế từ mẫu, dùng artwork của logo mới để quyết định hình dáng. Video giáo dục ở phía trên có thể render lại từ source, không phải dựng lại logo các thương hiệu này.</p>
+<div style="display:flex;gap:30px"><article><h3>Sắc Son · module → clone → lắp</h3><video controls preload="metadata" width="270" height="480" src="../assets/lessons/references/sac-son-reference.mp4"></video></article><article><h3>Yến Chi · hai chữ → serif → icon</h3><video controls preload="metadata" width="270" height="480" src="../assets/lessons/references/yen-chi-reference.mp4"></video></article></div>
+<h3>Endpoint đúng không chứng minh morph đạt</h3><img width="900" src="../assets/lessons/failure-kanjo-atlas.png" alt="Frame lỗi KANJO: trụ gợn, phình nét và vùng giao bệt trong khoảng 2.5–3.7 giây; frame đích sạch hơn không cứu phần giữa."><p>Ca lỗi để học cách phát hiện, không phải mẫu chuyển động đạt. <a href="visual-playbook.md">Đọc vai nét, các bước code và cổng nghiệm thu.</a></p>
+</section>
+<script src="../scripts/lesson-core.js"></script><script>
+const C=MyckyLessons,$=id=>document.getElementById(id),params=new URLSearchParams(location.search);
+for(const [value,text] of [['hbridge','08 · H nối bridge + O có lỗ'],['sassembly','09 · S → module → icon']]){const option=document.createElement('option');option.value=value;option.textContent=text;$('lesson').append(option);}
+const titles={counter:['01 · Thân B thu lại, hai khoang luôn có nghĩa','Mẫu học Bézier tự dựng, không phải artwork của một thương hiệu.'],interweave:['02 · Chữ đan: uốn từng nét, giữ trục và khoảng cách','Bốn vai hình học riêng; underpass thuộc J, nét đè thuộc K. Không kéo méo cả silhouette.'],clone:['03 · Clone trước, chỉ bản sao xoay một lần','Một module đã hoàn chỉnh. Bản gốc đứng yên; clone giữ cùng silhouette và pivot.'],draw:['04 · Vẽ cung theo chiều dài thật','Chỉ prefix của cubic được hiện. Nét đã vẽ giữ nguyên, đoạn chưa tới không tồn tại.'],radial:['05 · Fit module trước khi lắp radial','Chỉ dùng khi artwork có module lặp thật. Góc 0°, 90°, 180°, 270° không tự suy ra từ tên chữ.'],retract:['06 · Rút nét phụ, giữ nguyên các trụ chính','N/A là sơ đồ giáo dục: các phần có owner riêng, không squash toàn chữ để làm mất thanh.'],placement:['07 · Tịnh tiến đúng vị trí rồi mới morph','Khóa scale và hình dạng trong pha đặt chữ; bắt đầu nắn nét sau khi vị trí đã ổn định.']};
+const colors=['#285d93','#b85634','#29735b','#8b5399'];
+titles.hbridge=['08 · Bridge đi cùng hai thân H, vòng O giữ khoang âm','Bài truyền phương pháp sang một họ chữ khác; không phải logo OHANA hay artwork khách hàng.'];
+titles.sassembly=['09 · Một chuỗi đầy đủ: S → module → giữ → lắp','Upper lobe, waist, lower terminal có mapping cụ thể; clone chỉ dùng module đã hoàn chỉnh.'];
+let current=params.get('lesson')||'counter',time=0,playing=false,last=0;
+$('lesson').value=current;if(params.has('render'))document.body.classList.add('render');
+const path=(d,fill='black',attrs='')=>`<path d="${Array.isArray(d)?C.pathData(d):d}" fill="${fill}" ${attrs}/>`;
+const group=(content,transform='')=>`<g transform="${transform}">${content}</g>`;
+const moduleMark=(color='#111')=>path(C.modulePath,'none',`stroke="${color}" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"`);
+function B(q,debug=false){const p=C.bPaths(q);return path([...p.outer,...p.upper,...p.lower],'#111','fill-rule="evenodd"')+(debug?Object.values(p).map((d,i)=>path(d,'none',`stroke="${colors[i]}" stroke-width="1.5"`)).join(''):'');}
+function KJ(q,debug=false){const s=C.kjState(q),roles=Object.fromEntries(s.roles.map(r=>[r.id,r.path]));const gap=8;
+ return `<defs><mask id="under" maskUnits="userSpaceOnUse" x="0" y="0" width="390" height="410"><rect width="390" height="410" fill="white"/>${path(roles.leg,'black',`stroke="black" stroke-width="${gap}" stroke-linejoin="round"`)}</mask></defs>`+
+ path(roles.hook,debug?colors[3]:'#111','mask="url(#under)"')+['stem','arm','leg'].map((k,i)=>path(roles[k],debug?colors[i]:'#111')).join('')+
+ (debug?'<path d="M 98 60 L 98 320 M 284 60 L 284 270" stroke="#7b7b70" stroke-width="1" stroke-dasharray="3 4"/>':'');
+}
+function star(x,y){return `<path transform="translate(${x} ${y})" d="M0 -12 Q3 -3 12 0 Q3 3 0 12 Q-3 3 -12 0 Q-3 -3 0 -12Z" fill="#111"/>`;}
+function renderAt(t,opts={}){
+ time=Math.max(0,Math.min(6,t));current=opts.lesson||current;const debug=opts.debug??$('debug').checked,q=C.phase(time,.8,3.8);
+ $('title').textContent=titles[current][0];$('desc').textContent=titles[current][1];$('clock').textContent=`${time.toFixed(2)}s / 6.00s`;let svg='',caption='';
+ if(current==='counter'){
+  svg=group(B(0),'translate(35 65) scale(.67)')+group(B(q,debug),'translate(330 -8) scale(.95)')+group(B(1),'translate(725 65) scale(.67)');
+  svg+='<text x="110" y="325" class="label">SOURCE</text><text x="432" y="345" class="label">MORPH · q='+q.toFixed(2)+'</text><text x="800" y="325" class="label">TARGET</text>';
+  caption='Outer / counter trên / counter dưới: map riêng theo góc thân, eo và bowl. Không ghép điểm chỉ vì cùng nằm ở phía trên.';
+ }else if(current==='interweave'){
+  svg=group(KJ(q,false),'translate(110 -6) scale(.82)')+group(KJ(q,debug),'translate(540 -6) scale(.82)');
+  // IDs in masks must be unique when comparing production and debug glyphs.
+  svg=svg.replace('id="under"','id="under-a"').replace('url(#under)','url(#under-a)');
+  svg+='<text x="195" y="338" class="label">HÌNH THỰC TẾ</text><text x="610" y="338" class="label">VAI NÉT + TRỤ KHÓA</text>';
+  caption='Trụ được giữ thẳng. K-leg sở hữu nét đè; khoảng trắng cắt đúng J ở phía dưới và đi cùng nét đè suốt pha, không dọn lỗi muộn.';
+ }else if(current==='clone'){
+  const s=C.cloneState(time);svg=group(moduleMark()+(s.cloneVisible?group(moduleMark(debug?colors[0]:'#111'),`rotate(${s.cloneAngle})`):'')+(s.accentVisible?star(0,0):''),'translate(480 178)');
+  svg+=`<text x="70" y="325" class="label mono">original: 0°</text><text x="370" y="325" class="label mono">clone: ${s.cloneAngle.toFixed(1)}°</text>`;
+  caption=time<1?'GIỮ MODULE: hình gốc hoàn chỉnh, chưa có clone.':time<1.5?'CLONE TRÙNG KHÍT: góc clone vẫn là 0°, đủ nét trước khi xoay.':time<4?'XOAY: theta tăng đơn điệu 0→180°. Không yoyo; không quay cả hai nửa.':'KHỚP XONG → ACCENT: sao chỉ hiện sau khi hai module ổn định.';
+ }else if(current==='draw'){
+  const curve=[[260,260],[270,12],[660,-10],[700,220]],p=C.prefixCubic(curve,q);
+  svg=path('M260 300 L260 260','none','stroke="#111" stroke-width="15"')+path(p,'none','stroke="#111" stroke-width="9" stroke-linecap="round"');
+  if(debug&&p.length){const end=p.at(-1).slice(-2);svg+=`<circle cx="${end[0]}" cy="${end[1]}" r="7" fill="${colors[1]}"/>`;}
+  if(time>=4.2)svg+=star(695,225);
+  caption='LUT arc-length → q·L → tham số t → de Casteljau. Chấm màu chỉ là đầu bút debug; không dùng opacity để tráo cả đường cong.';
+ }else if(current==='radial'){
+  const states=C.radialState(time);svg=group(states.filter(s=>s.visible).map(s=>group(moduleMark(debug?colors[s.id]:'#111'),`rotate(${s.angle})`)).join(''),'translate(480 175) scale(.88)');
+  caption='Chỉ một module nguồn. Từng clone xuất hiện trùng gốc rồi tới góc đích; original giữ 0°. Vùng giao phải được thiết kế từ artwork, không mặc định hợp lệ.';
+ }else if(current==='retract'){
+  const r=C.phase(time,.8,3.3),p=1-r;
+  const N=path('M0 0V245 M160 0V245','none',`stroke="${debug?colors[0]:'#111'}" stroke-width="27"`)+path(`M0 0 L${160*p} ${245*p}`,'none',`stroke="${debug?colors[1]:'#111'}" stroke-width="${27*p}"`);
+  const A=path('M0 245 L85 0 L170 245','none',`stroke="${debug?colors[0]:'#111'}" stroke-width="25" stroke-linejoin="miter"`)+(p>0?path('M38 150H133','none',`stroke="${debug?colors[1]:'#111'}" stroke-width="${24*p}"`):'');
+  svg=group(N,'translate(205 42)')+group(A,'translate(585 42)');caption='N: đoạn phụ rút dọc tim về nút neo. A: crossbar mỏng quanh tim. Hai trụ không đổi size, vị trí hay độ dày để che thao tác.';
+ }else if(current==='hbridge'){
+  const h=C.hState(q),curve=p=>[['M',...p[0]],['C',...p[1],...p[2],...p[3]]];
+  svg='<path d="M690 170 A210 165 0 1 1 270 170 A210 165 0 1 1 690 170Z M670 170 A190 145 0 1 1 290 170 A190 145 0 1 1 670 170Z" fill="#111" fill-rule="evenodd"/>';
+  svg+=[h.left,h.right,h.bridge].map((p,i)=>path(curve(p),'none',`stroke="${debug?colors[i]:'#111'}" stroke-width="${h.width}" stroke-linecap="butt"`)).join('');
+  if(debug)svg+=[h.leftJunction,h.rightJunction].map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="4" fill="#f7f5ef" stroke="#111"/>`).join('');
+  caption='Cùng một q cập nhật hai thân. Endpoint của bridge lấy trực tiếp từ cubic hai thân tại mỗi frame; không có ba tween độc lập làm tuột nút. O có outer/inner riêng.';
+ }else if(current==='sassembly'){
+  const morph=C.phase(time,.4,1.4),states=C.radialState(time-1),sPath=C.sModulePath(morph);
+  let mark=path(sPath,'none',`stroke="#111" stroke-width="${C.lerp(27,14,morph)}" stroke-linecap="round" stroke-linejoin="round"`);
+  if(time>=1.9)mark+=states.filter(s=>s.id>0&&s.visible).map(s=>group(moduleMark(debug?colors[s.id]:'#111'),`rotate(${s.angle})`)).join('');
+  svg=group(mark,'translate(480 175) scale(.9)');
+  caption=time<1.4?'MORPH S: upper lobe → cung trên; waist → eo module; lower terminal → chân neo. Cùng cubic correspondence, không đổi ảnh.':time<1.9?'GIỮ MODULE: morph hoàn tất; chưa nhân.':'LẮP: clone dùng chính path module đã đạt; từng bản quay lần lượt. Với k khác 4, tính duration bằng radialDuration(k).';
+ }else if(current==='placement'){
+  const move=C.phase(time,.5,2),morph=C.phase(time,2.5,4.5),dx=70*(1-move);
+  const roles=Object.fromEntries(C.kjState(morph).roles.map(r=>[r.id,r.path]));
+  const kt=`translate(${-dx} ${-12*move})`,jt=`translate(${dx} ${12*move})`;
+  const defs=`<defs><mask id="place-mask" maskUnits="userSpaceOnUse" x="-100" y="-100" width="600" height="600"><rect x="-100" y="-100" width="600" height="600" fill="white"/>${group(path(roles.leg,'black','stroke="black" stroke-width="8" stroke-linejoin="round"'),kt)}</mask></defs>`;
+  const glyphs=defs+`<g mask="url(#place-mask)">${group(path(roles.hook,debug?colors[3]:'#111'),jt)}</g>`+group(['stem','arm','leg'].map((id,i)=>path(roles[id],debug?colors[i]:'#111')).join(''),kt);
+  svg=group(glyphs,'translate(310 0) scale(.82)');
+  svg+=`<text x="85" y="327" class="label">${time<2.5?'PHA ĐẶT: geometry q=0, chỉ position đổi':'PHA MORPH: position khóa, geometry mới đổi'}</text>`;
+  caption='K và J có position owner riêng: K dịch chéo lên, J dịch chéo xuống. Scale cố định; q=0 tới 2,50s, rồi mới đổi geometry trong vị trí đã khóa.';
+ }
+ $('art').innerHTML=svg;$('caption').textContent=caption;$('seek').value=time;
+ const geometryQ=current==='placement'?C.phase(time,2.5,4.5):current==='sassembly'?C.phase(time,.4,1.4):['counter','interweave','hbridge'].includes(current)?q:null;
+ window.lessonState={lesson:current,time,q:geometryQ,revealProgress:current==='draw'?q:null,debug};return window.lessonState;
+}
+window.renderAt=renderAt;window.lessonRenderers={B,KJ};
+$('lesson').onchange=e=>{current=e.target.value;renderAt(time);};$('seek').oninput=e=>{playing=false;renderAt(+e.target.value);};$('debug').onchange=()=>renderAt(time);$('play').onclick=()=>{playing=!playing;last=performance.now();};
+function tick(now){if(playing){time+=(now-last)/1000;if(time>6)time=0;renderAt(time);}last=now;requestAnimationFrame(tick);}requestAnimationFrame(tick);renderAt(0);
+</script></html>

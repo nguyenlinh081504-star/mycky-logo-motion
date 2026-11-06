@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "language": "vi",
   "count": 42,
   "claim_boundary": "Sampled visible states/order are observed; construction steps are engineering reconstruction, not original author code. See channel-study for dense review and uncertainties.",
@@ -36,7 +36,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "counter",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/counter.mp4",
+        "image": "assets/lessons/counter-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F02",
@@ -72,7 +80,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "counter",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/counter.mp4",
+        "image": "assets/lessons/counter-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F03",
@@ -106,7 +122,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "interweave",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/interweave.mp4",
+        "image": "assets/lessons/interweave-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F04",
@@ -139,7 +163,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": true
+      "requires_repeated_module": true,
+      "lesson_family": "radial",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/radial.mp4",
+        "image": "assets/lessons/radial-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F05",
@@ -172,7 +204,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "interweave",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/interweave.mp4",
+        "image": "assets/lessons/interweave-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F06",
@@ -206,7 +246,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": true
+      "requires_repeated_module": true,
+      "lesson_family": "radial",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/sassembly.mp4",
+        "image": "assets/lessons/sassembly-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F07",
@@ -239,7 +287,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "counter",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/counter.mp4",
+        "image": "assets/lessons/counter-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F08",
@@ -268,7 +324,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "counter",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/counter.mp4",
+        "image": "assets/lessons/counter-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F09",
@@ -297,7 +361,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "retract",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/retract.mp4",
+        "image": "assets/lessons/retract-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F10",
@@ -325,7 +397,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "retract",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/retract.mp4",
+        "image": "assets/lessons/retract-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F11",
@@ -353,7 +433,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "interweave",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/hbridge.mp4",
+        "image": "assets/lessons/hbridge-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F12",
@@ -382,7 +470,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "retract",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/retract.mp4",
+        "image": "assets/lessons/retract-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F13",
@@ -415,7 +511,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "interweave",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/interweave.mp4",
+        "image": "assets/lessons/interweave-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F14",
@@ -449,7 +553,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "interweave",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/interweave.mp4",
+        "image": "assets/lessons/interweave-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F15",
@@ -483,7 +595,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": true
+      "requires_repeated_module": true,
+      "lesson_family": "interweave",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/interweave.mp4",
+        "image": "assets/lessons/interweave-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F16",
@@ -519,7 +639,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "interweave",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/interweave.mp4",
+        "image": "assets/lessons/interweave-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F17",
@@ -554,7 +682,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "interweave",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/interweave.mp4",
+        "image": "assets/lessons/interweave-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F18",
@@ -590,7 +726,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "interweave",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/interweave.mp4",
+        "image": "assets/lessons/interweave-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F19",
@@ -624,7 +768,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "placement",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/placement.mp4",
+        "image": "assets/lessons/placement-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F20",
@@ -653,7 +805,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "draw",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/draw.mp4",
+        "image": "assets/lessons/draw-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F21",
@@ -687,7 +847,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": true
+      "requires_repeated_module": true,
+      "lesson_family": "clone",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/clone.mp4",
+        "image": "assets/lessons/clone-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F22",
@@ -716,7 +884,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": true
+      "requires_repeated_module": true,
+      "lesson_family": "clone",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/clone.mp4",
+        "image": "assets/lessons/clone-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F23",
@@ -744,7 +920,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": true
+      "requires_repeated_module": true,
+      "lesson_family": "clone",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/clone.mp4",
+        "image": "assets/lessons/clone-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F24",
@@ -772,7 +956,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": true
+      "requires_repeated_module": true,
+      "lesson_family": "radial",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/radial.mp4",
+        "image": "assets/lessons/radial-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F25",
@@ -807,7 +999,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": true
+      "requires_repeated_module": true,
+      "lesson_family": "radial",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/radial.mp4",
+        "image": "assets/lessons/radial-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F26",
@@ -841,7 +1041,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": true
+      "requires_repeated_module": true,
+      "lesson_family": "clone",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/clone.mp4",
+        "image": "assets/lessons/clone-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F27",
@@ -875,7 +1083,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "draw",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/draw.mp4",
+        "image": "assets/lessons/draw-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F28",
@@ -903,7 +1119,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "draw",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/draw.mp4",
+        "image": "assets/lessons/draw-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F29",
@@ -932,7 +1156,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "draw",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/draw.mp4",
+        "image": "assets/lessons/draw-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F30",
@@ -966,7 +1198,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "counter",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/counter.mp4",
+        "image": "assets/lessons/counter-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F31",
@@ -1000,7 +1240,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "counter",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/counter.mp4",
+        "image": "assets/lessons/counter-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F32",
@@ -1033,7 +1281,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "interweave",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/interweave.mp4",
+        "image": "assets/lessons/interweave-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F33",
@@ -1068,7 +1324,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "draw",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/draw.mp4",
+        "image": "assets/lessons/draw-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F34",
@@ -1102,7 +1366,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "draw",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/draw.mp4",
+        "image": "assets/lessons/draw-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F35",
@@ -1135,7 +1407,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "placement",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/placement.mp4",
+        "image": "assets/lessons/placement-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F36",
@@ -1163,7 +1443,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "placement",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/placement.mp4",
+        "image": "assets/lessons/placement-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F37",
@@ -1198,7 +1486,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": true
+      "requires_repeated_module": true,
+      "lesson_family": "radial",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/radial.mp4",
+        "image": "assets/lessons/radial-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F38",
@@ -1232,7 +1528,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "interweave",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/interweave.mp4",
+        "image": "assets/lessons/interweave-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F39",
@@ -1266,7 +1570,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "interweave",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/interweave.mp4",
+        "image": "assets/lessons/interweave-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F40",
@@ -1300,7 +1612,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": true
+      "requires_repeated_module": true,
+      "lesson_family": "radial",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/radial.mp4",
+        "image": "assets/lessons/radial-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F41",
@@ -1334,7 +1654,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "interweave",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/interweave.mp4",
+        "image": "assets/lessons/interweave-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     },
     {
       "id": "F42",
@@ -1368,7 +1696,15 @@
         "Không có nét rời/gãy/gai hay vùng đen lạ ở đoạn trung gian",
         "Xem playback và decoded frames; không chỉ dùng numerical PASS"
       ],
-      "requires_repeated_module": false
+      "requires_repeated_module": false,
+      "lesson_family": "interweave",
+      "lesson_guide": "references/visual-playbook.md",
+      "learning_resources": {
+        "video": "assets/lessons/interweave.mp4",
+        "image": "assets/lessons/interweave-middle.png",
+        "code": "scripts/lesson-core.js",
+        "limits": "Teaching geometry; replace measured source/target paths for this artwork. Read visual-playbook for applicability."
+      }
     }
   ]
 }

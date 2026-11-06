@@ -10,6 +10,33 @@ hiểu hình bằng thị giác; script đi kèm đo hình, tách frame và ki�
 giả là mô hình AI tự hiểu logo. Không có một phép morph chung đảm bảo mọi chữ
 thành mọi icon đều đẹp. Mỗi nét phải có nguồn, đích và quá trình rõ ràng.
 
+**Bản v2 có bài nhìn + video + code:** trước khi dựng hoặc sửa morph, đọc
+[visual playbook](references/visual-playbook.md), mở bài đúng họ hình học trong
+[SVG laboratory](references/visual-lessons.html), xem video và ảnh được liên kết.
+Không chỉ đọc bảng công thức rồi tự nội suy cả contour. Đổi tốc độ một bản đã
+đạt thì không cần học lại các bài hình học.
+
+## Cổng hình học cho mọi logo mới
+
+1. **Chuẩn bị chữ:** artwork → glyph rời đầy đủ → bản đồ màu từng vai nét →
+   fit tĩnh icon. Chữ bị che cần phục dựng có căn cứ, không crop pixel rồi morph.
+2. **Chọn theo anatomy:** trụ thẳng, bowl/counter, junction, ribbon, module lặp,
+   nét vẽ. Từng formula trong catalog có `lesson_family` để tìm bài tương ứng.
+   Không chọn chỉ theo tên chữ hoặc ép hình thành công thức quen tay.
+3. **Khóa phần phải giữ:** source→target của từng vai, tim/đầu/đáy, tangent,
+   width profile, crossing owner. Trụ thẳng ở cả hai đầu không tự biến thành
+   gợn cao su ở giữa; chỉ cho cong khi target thật có lý do hình học đó.
+4. **Thử đoạn biến trước:** native path + debug màu + hình thật; q=0,.1,…,1,
+   frame sát chuyển pha và clip 1×/0,25×. Giải quyết mapping/width/giao nét trước
+   khi giảm duration. Không dựng toàn phim rồi chỉ nhìn frame cuối.
+5. **Nghiệm thu riêng:** geometry, nhịp và file video là ba việc. FPS/codec/hash
+   đúng không chứng minh morph đẹp. Có mấu, gợn, bệt đen hoặc nét không có nguồn
+   thì sửa trực tiếp và kiểm lại; không điền PASS để đủ schema.
+
+Ca KANJO 1,75–4,25s cho thấy endpoint sạch nhưng phần giữa vẫn fail. Đây là
+bài học áp dụng chung cho **mọi chữ**, không phải template K/J. Không bảo đảm
+không bao giờ lỗi; bắt buộc phát hiện và chặn lỗi trên chính artwork mới.
+
 ## 1. Đọc đầu vào và bắt tay vào việc
 
 1. Xác nhận file thật: logo đích, video mẫu, glyph thường/cách điệu, source nếu
@@ -392,6 +419,11 @@ và kế hoạch đuôi nhạc rõ khi hold đổi; không tự cắt/kéo nhạ
 
 - `references/channel-study.md`: video TikTok thực sự đã xem, mốc và quan sát.
 - `references/formulas.json`: điều kiện, từng bước, rủi ro, nguồn từng công thức.
+- `references/visual-playbook.md`: 7 họ, video/ảnh, vai nét, constraint và cách code.
+- `references/visual-lessons.html`: native SVG deterministic, scrub và debug màu.
+- `references/geometry-contract.completed-example.json`: spec đã điền của bài học.
+- `references/reference-video-ledger.json`: video tham chiếu thật + cửa sổ cần xem.
+- `examples/counter-motion-canvas.tsx`: scene native 3.17.2, compound winding đúng.
 - `references/selection-template.json`: gate, điểm có chứng cứ và quyết định chọn.
 - `references/motion-contract.example.json`: mẫu ancestry/phase/pivot/QA để triển khai.
 - `references/channel-inventory.json`: danh mục link, không đồng nghĩa đã xem.

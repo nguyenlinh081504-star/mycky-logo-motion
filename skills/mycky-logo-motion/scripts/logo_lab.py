@@ -24,6 +24,14 @@ def executable(name):
         if value and Path(value).is_file():return str(value)
     raise ValueError(f'Không tìm thấy {name}; đặt MYCKY_{name.upper()} hoặc runtime.local.json.')
 
+def open_video_capture(path):
+    # Several HD decode workers can exhaust memory on an 8 GB workstation.
+    # Keep evidence extraction serial and cap this decoder, not the user's apps.
+    params=[cv2.CAP_PROP_N_THREADS,1] if hasattr(cv2,'CAP_PROP_N_THREADS') else []
+    cap=cv2.VideoCapture(str(path),cv2.CAP_FFMPEG,params)
+    if not cap.isOpened():raise ValueError(f'Cannot open video decoder: {path}')
+    return cap
+
 def probe(path):
     path=Path(path).resolve()
     if not path.is_file():raise ValueError(f'Không có file: {path}')
@@ -198,7 +206,7 @@ def inspect_logo(args):
 def analyze_reference(args):
     meta=probe(args.input);fps=meta['fps'];start,end=(0.,meta['duration']) if not args.window else map(float,args.window.split(','))
     if not 0<=start<end<=meta['duration']+.02:raise ValueError('Invalid --window.')
-    out=Path(args.out);out.mkdir(parents=True,exist_ok=True);cap=cv2.VideoCapture(str(args.input))
+    out=Path(args.out);out.mkdir(parents=True,exist_ok=True);cap=open_video_capture(args.input)
     metrics=[];previous=None;i=0;frames=[];labels=[];last_sample=-1e9
     interval=1/args.sample_fps;crop=tuple(map(int,args.crop.split(','))) if args.crop else None
     while True:
@@ -219,6 +227,7 @@ def analyze_reference(args):
             image.save(out/name,quality=93);frames.append(image.resize((270,480)));labels.append(f'f{i-1} {t:.3f}s');last_sample=t
             if len(frames)>600:raise ValueError('More than 600 evidence frames; use a narrower --window or smaller --sample-fps.')
     cap.release()
+    if not frames:raise ValueError('No evidence frames decoded; do not treat an empty review as success. Check decoder/resources/window.')
     for k in range(0,len(frames),48):sheet(frames[k:k+48],out/f'contact-{k//48:02d}.jpg',labels[k:k+48])
     # Candidate boundaries only; a morph peak is not necessarily a shot cut.
     peaks=[]
@@ -232,7 +241,7 @@ def analyze_reference(args):
     return {k:v for k,v in result.items() if k!='metrics'}
 
 def verify_video(args):
-    meta=probe(args.input);cap=cv2.VideoCapture(str(args.input));decoded=0;selected=[];labels=[];last=None;diffs=[]
+    meta=probe(args.input);cap=open_video_capture(args.input);decoded=0;selected=[];labels=[];last=None;diffs=[]
     step=max(1,round(meta['fps']*.25))
     while True:
         ok,frame=cap.read()

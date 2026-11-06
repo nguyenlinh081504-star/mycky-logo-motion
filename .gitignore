@@ -8,3 +8,7 @@ outputs/
 *.mov
 .env
 .env.*
+
+# Teaching videos are deliberate skill resources.
+!skills/mycky-logo-motion/assets/lessons/*.mp4
+!skills/mycky-logo-motion/assets/lessons/references/*.mp4

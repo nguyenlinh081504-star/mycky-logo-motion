@@ -1,0 +1,28 @@
+{
+  "status": "COMPLETED_TEACHING_SPEC_NOT_A_CUSTOMER_LOGO",
+  "lesson": "interweave",
+  "asset_authority": "Authored educational geometry.kj in scripts/lesson-core.js. Do not substitute for customer artwork.",
+  "output": {"width":960,"height":540,"fps":30,"duration_s":6,"frames":180},
+  "formula": {"ids":["F17"],"reason":"Two full glyphs with a deliberately ordered crossing. No repeated module; radial assembly is ineligible."},
+  "source_and_target": {"geometry":"scripts/lesson-core.js#geometry.kj","same_commands_per_role":true,"source_frame":0,"target_after_frame":114},
+  "roles": [
+    {"id":"stem","anatomy":"K left stem","source_width":36,"target_width":18,"center_x":98,"y_top":50,"y_bottom":330,"constraint":"Two straight edges around a fixed centerline; no wave control point."},
+    {"id":"arm","anatomy":"K upper diagonal","constraint":"Attach to the K stem junction throughout; do not borrow pixels from J."},
+    {"id":"leg","anatomy":"K lower diagonal to ribbon","constraint":"Remain attached to K; owner of upper crossing."},
+    {"id":"hook","anatomy":"J stem and full hook","constraint":"Full glyph below occlusion, same commands; do not crop into visible fragments."}
+  ],
+  "crossings": [{"top":"leg","bottom":"hook","gap_units":8,"implementation":"underpass mask derived from CURRENT leg path plus width; active throughout morph","late_cleanup_allowed":false}],
+  "phases": [
+    {"id":"read","start_s":0,"end_s":0.8,"geometry_q":0},
+    {"id":"role_morph","start_s":0.8,"end_s":3.8,"geometry_q":"ease((t-.8)/3)","position_locked":true,"rotation_locked":true},
+    {"id":"target_hold","start_s":3.8,"end_s":6,"geometry_q":1}
+  ],
+  "case_specific_gates": [
+    "lineResidual(protectedStemEdges) == 0 in analytic coordinates at all q samples",
+    "J geometry remains complete before its ownership mask",
+    "mask owner remains K-leg; no cleanup phase conceals an unresolved crossing",
+    "view actual black render and color roles, not only a topology count"
+  ],
+  "evidence_to_open": ["assets/lessons/interweave.mp4","assets/lessons/interweave-middle.png","assets/lessons/interweave-end.png"],
+  "limits": "Selected invariants only, not optimal aesthetics or exact KANJO reconstruction. Customer QA must use its own actual frames."
+}

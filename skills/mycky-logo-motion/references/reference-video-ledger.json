@@ -1,0 +1,60 @@
+{
+  "kind": "USER_SUPPLIED_LOCAL_REFERENCE_NOT_RECONSTRUCTED_TIKTOK_SOURCE",
+  "review": "Frame studies checked 2026-11-06; use playback and denser frames before fitting exact motion. Never claim exact original control points.",
+  "videos": [
+    {
+      "file": "assets/lessons/references/sac-son-reference.mp4",
+      "source_name": "SAC_SON_2X.mp4",
+      "duration_s": 4,
+      "fps": 60,
+      "frames": 240,
+      "role": "User-designated benchmark: module morph, hold, sequential clone assembly and pacing",
+      "windows_approx_s": {
+        "morph": [
+          0.65,
+          1.05
+        ],
+        "module_hold": [
+          1.05,
+          1.2
+        ],
+        "assembly": [
+          1.2,
+          2.2
+        ],
+        "accent": [
+          2.2,
+          2.6
+        ],
+        "shrink_wordmark": [
+          2.6,
+          3.3
+        ]
+      },
+      "limits": "Use rhythm/formula, never its S silhouette for another logo."
+    },
+    {
+      "file": "assets/lessons/references/yen-chi-reference.mp4",
+      "source_name": "YEN_CHI_2X_FINAL_HOLD1S.mp4",
+      "duration_s": 3.1,
+      "fps": 60,
+      "frames": 186,
+      "role": "User-supplied layout/serif/interweave reference",
+      "windows_approx_s": {
+        "entry": [
+          0,
+          0.4
+        ],
+        "placement_morph": [
+          0.4,
+          1.4
+        ],
+        "lockup": [
+          1.4,
+          2.2
+        ]
+      },
+      "limits": "Observed intermediate overlapping forms are not a universal geometry acceptance standard."
+    }
+  ]
+}

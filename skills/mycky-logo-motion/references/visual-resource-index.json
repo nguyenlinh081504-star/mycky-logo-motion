@@ -1,0 +1,148 @@
+{
+  "version": 2,
+  "teaching_not_customer_artwork": true,
+  "default_demo": {
+    "width": 960,
+    "height": 540,
+    "fps": 30,
+    "duration_s": 6,
+    "frames": 180
+  },
+  "lessons": [
+    {
+      "id": "counter",
+      "video": "assets/lessons/counter.mp4",
+      "sha256": "fc54203b8ff218f5b13875422057aa4d9bd58d53264ce359c798804f2e9db16d",
+      "snapshots": [
+        "assets/lessons/counter-start.png",
+        "assets/lessons/counter-middle.png",
+        "assets/lessons/counter-end.png"
+      ],
+      "native_source": [
+        "references/visual-lessons.html",
+        "scripts/lesson-core.js"
+      ],
+      "verified": "Decode all 180 frames; inspect timecoded images; browser-native selected invariants. Not a universal aesthetic certification."
+    },
+    {
+      "id": "interweave",
+      "video": "assets/lessons/interweave.mp4",
+      "sha256": "b5f501abf4baa61c198914cbd2dc95f37dfe842c082470f4be1b577b4721f911",
+      "snapshots": [
+        "assets/lessons/interweave-start.png",
+        "assets/lessons/interweave-middle.png",
+        "assets/lessons/interweave-end.png"
+      ],
+      "native_source": [
+        "references/visual-lessons.html",
+        "scripts/lesson-core.js"
+      ],
+      "verified": "Decode all 180 frames; inspect timecoded images; browser-native selected invariants. Not a universal aesthetic certification."
+    },
+    {
+      "id": "clone",
+      "video": "assets/lessons/clone.mp4",
+      "sha256": "0bdce331abc84e53e1276eb7594ac8555321440a264aaade9f6f2a5108874542",
+      "snapshots": [
+        "assets/lessons/clone-start.png",
+        "assets/lessons/clone-middle.png",
+        "assets/lessons/clone-end.png"
+      ],
+      "native_source": [
+        "references/visual-lessons.html",
+        "scripts/lesson-core.js"
+      ],
+      "verified": "Decode all 180 frames; inspect timecoded images; browser-native selected invariants. Not a universal aesthetic certification."
+    },
+    {
+      "id": "draw",
+      "video": "assets/lessons/draw.mp4",
+      "sha256": "9da3d0dbb0f389b7881e708f6a9b2307cc3f4e474eba1c94dba8e28a1a72b4d4",
+      "snapshots": [
+        "assets/lessons/draw-start.png",
+        "assets/lessons/draw-middle.png",
+        "assets/lessons/draw-end.png"
+      ],
+      "native_source": [
+        "references/visual-lessons.html",
+        "scripts/lesson-core.js"
+      ],
+      "verified": "Decode all 180 frames; inspect timecoded images; browser-native selected invariants. Not a universal aesthetic certification."
+    },
+    {
+      "id": "radial",
+      "video": "assets/lessons/radial.mp4",
+      "sha256": "256cc6c56f2b10b5504371f867d93f569b186ab642fe2f7065b3293a998ddf5b",
+      "snapshots": [
+        "assets/lessons/radial-start.png",
+        "assets/lessons/radial-middle.png",
+        "assets/lessons/radial-end.png"
+      ],
+      "native_source": [
+        "references/visual-lessons.html",
+        "scripts/lesson-core.js"
+      ],
+      "verified": "Decode all 180 frames; inspect timecoded images; browser-native selected invariants. Not a universal aesthetic certification."
+    },
+    {
+      "id": "retract",
+      "video": "assets/lessons/retract.mp4",
+      "sha256": "884511c4691eb70ebc5f9afe1963556f4294aeaca7b02351d8b48b9526299a99",
+      "snapshots": [
+        "assets/lessons/retract-start.png",
+        "assets/lessons/retract-middle.png",
+        "assets/lessons/retract-end.png"
+      ],
+      "native_source": [
+        "references/visual-lessons.html",
+        "scripts/lesson-core.js"
+      ],
+      "verified": "Decode all 180 frames; inspect timecoded images; browser-native selected invariants. Not a universal aesthetic certification."
+    },
+    {
+      "id": "placement",
+      "video": "assets/lessons/placement.mp4",
+      "sha256": "c1f094d1b98848cdaa55bdc2f3e3717944ac30359369860e85e9e23603a2fda5",
+      "snapshots": [
+        "assets/lessons/placement-start.png",
+        "assets/lessons/placement-middle.png",
+        "assets/lessons/placement-end.png"
+      ],
+      "native_source": [
+        "references/visual-lessons.html",
+        "scripts/lesson-core.js"
+      ],
+      "verified": "Decode all 180 frames; inspect timecoded images; browser-native selected invariants. Not a universal aesthetic certification."
+    },
+    {
+      "id": "hbridge",
+      "video": "assets/lessons/hbridge.mp4",
+      "sha256": "a23b2603f515a5636623fc6fb4a11143db9185a0650f8f2e89fc578697eefa82",
+      "snapshots": [
+        "assets/lessons/hbridge-start.png",
+        "assets/lessons/hbridge-middle.png",
+        "assets/lessons/hbridge-end.png"
+      ],
+      "native_source": [
+        "references/visual-lessons.html",
+        "scripts/lesson-core.js"
+      ],
+      "verified": "Decode all 180 frames; inspect timecoded images; browser-native selected invariants. Not a universal aesthetic certification."
+    },
+    {
+      "id": "sassembly",
+      "video": "assets/lessons/sassembly.mp4",
+      "sha256": "8b28b9a3c91c030aa24aa44972d52c1c4f54808b34c2338dc520699f72553343",
+      "snapshots": [
+        "assets/lessons/sassembly-start.png",
+        "assets/lessons/sassembly-middle.png",
+        "assets/lessons/sassembly-end.png"
+      ],
+      "native_source": [
+        "references/visual-lessons.html",
+        "scripts/lesson-core.js"
+      ],
+      "verified": "Decode all 180 frames; inspect timecoded images; browser-native selected invariants. Not a universal aesthetic certification."
+    }
+  ]
+}

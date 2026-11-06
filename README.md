@@ -19,6 +19,33 @@ có quan hệ hình học rõ, triển khai và tự kiểm tra chuyển động
 
 ## Cài từ repository này
 
+### Bản v2: học bằng hình, video và source chạy được
+
+- **9 video kỹ thuật**: counter, đan chữ, clone, draw-on, radial, rút nét,
+  placement, H/O giữ bridge và một chuỗi đầy đủ S → module → icon.
+- **27 ảnh theo pha** và một atlas ca lỗi: nhận diện trụ gợn, phình nét, giao
+  bệt; không nghiệm thu bằng frame cuối.
+- **2 video tham chiếu thật** do user cung cấp: Sắc Son và Yến Chi. Học cơ chế/
+  nhịp, không mượn hình dáng của chúng cho logo khác.
+- Native SVG có thanh tua, debug màu, geometry core dùng chung và scene
+  Motion Canvas 3.17.2 minh họa compound path với winding đúng.
+- Kiểm browser trên chính cubic/path: B giữ hai khoang ở 101 trạng thái;
+  H giữ bridge liền ở 101 trạng thái; seek ngược/xuôi tái lập cùng frame.
+
+![H/O: bridge lấy điểm trên hai thân đang biến hình](skills/mycky-logo-motion/assets/lessons/hbridge-middle.png)
+
+[Đọc visual playbook](skills/mycky-logo-motion/references/visual-playbook.md)
+· [Video S → module → icon](skills/mycky-logo-motion/assets/lessons/sassembly.mp4)
+· [Video giữ hai khoang B](skills/mycky-logo-motion/assets/lessons/counter.mp4)
+· [Video Sắc Son tham chiếu](skills/mycky-logo-motion/assets/lessons/references/sac-son-reference.mp4)
+
+Để tua tương tác: tải repository rồi mở
+`skills/mycky-logo-motion/references/visual-lessons.html` trong Chrome. GitHub
+hiển thị source HTML; không chạy phòng thí nghiệm ngay trong trang repository.
+Các ví dụ hình học là bài học có code, không phải logo đích cho mọi khách.
+
+### Cài skill
+
 Sao chép URL thật của repository hoặc đường dẫn
 `skills/mycky-logo-motion`, rồi yêu cầu Codex:
 
