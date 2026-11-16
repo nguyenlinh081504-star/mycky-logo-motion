@@ -5,6 +5,20 @@ có quan hệ hình học rõ, triển khai và tự kiểm tra chuyển động
 
 ## Có gì trong skill?
 
+### Timeline & Production Director (bổ sung v3)
+
+- Quy trình **12 bước** từ video mẫu đến timeline chi tiết, đăng ký nét, source, render và QA.
+- Phân tích **presentation timestamps (PTS) thật**, phát hiện frame kéo dài; contact sheet + JSON evidence bằng script mới.
+- **Casebook 13 ca**: CIMUNA, SON MUSIC, ELAW VIỆT, SQUIVA, GRIT BODY, ASH XANH, JB, FANTASHION, LUMI, OHANA, HD, JK và các ca morph có counter.
+- JSON contract/schema, prompt bàn giao Codex, kiểm từng phase và chiến lược tiết kiệm token.
+- **Không đăng video/logo khách lên repository công khai.** Giữ asset nguồn trong ZIP dự án riêng.
+
+[Quy trình Producer](skills/mycky-logo-motion/references/production-director.md) · [Timeline](skills/mycky-logo-motion/references/timeline-observation-standard.md) · [Casebook](skills/mycky-logo-motion/references/production-casebook.md) · [Codex Handoff](skills/mycky-logo-motion/references/codex-handoff-pack.md)
+
+Chạy ở thư mục skill: python scripts/timeline_evidence.py D:/input/reference.mp4 --out D:/job/qa/timeline --step 0.2
+
+
+
 ### Cập nhật v2.1: công thức triển khai và kiểm thử
 
 - Clone +90° theo bản cha đã dừng, giữ chữ gốc dày trước morph khi brief yêu cầu.

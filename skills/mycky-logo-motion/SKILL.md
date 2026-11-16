@@ -441,3 +441,19 @@ Học thêm bằng review mẫu thiếu cơ chế, ghi timecode/evidence và m�
 Không biến sở thích riêng một logo thành luật toàn bộ. Tự hỏi trước kết luận:
 đã nhìn frame thật chưa; từng nét nguồn→đích rõ chưa; công thức hợp artwork hay
 chỉ cùng tên chữ; thứ tự đúng chưa; MP4 thực tế đã xem chưa?
+
+
+## 12. Production Director — bóc tách video mẫu và bàn giao Codex (v3 extension)
+
+Khi người dùng yêu cầu “bóc tách video mẫu và làm Timeline tổng kết”, “đặc tả đoạn biến hình”, “đưa vào Codex cho tiết kiệm token” hoặc “đóng gói handoff”, **đọc**:
+
+1. [Production Director](references/production-director.md) — quy trình 12 bước, evidence, asset source và nghiệm thu.
+2. [Timeline Observation Standard](references/timeline-observation-standard.md) — per-frame PTS, microtimeline, observed/inferred/proposed.
+3. [Geometry Morph Contract](references/geometry-morph-contract.md) — anatomy, mapping, Bézier, width, junction/ownership.
+4. [Production Casebook](references/production-casebook.md) — CIMUNA, SON MUSIC, ELAW VIỆT, SQUIVA, GRIT BODY, ASH XANH, JB, FANTASHION, LUMI và ca liên quan. Các mốc case chỉ để học cách làm, không phải tài nguyên của logo khác.
+5. [QA and Token Budget](references/production-qa-token.md) — render cửa sổ lỗi, sửa đúng owner, kiểm full cuối.
+6. [Codex Handoff Pack](references/codex-handoff-pack.md) và [Timeline JSON Schema](references/timeline-contract.schema.json) / [Example](references/timeline-contract.example.json).
+
+**Bằng chứng PTS:** python scripts/timeline_evidence.py input.mp4 --out qa/timeline --step 0.2. Dùng ffmpeg/ffprobe đã cài, không tự cài mới. Khi có VFR, không dùng frame index / FPS để gán thời gian. Script trích evidence chứ không tự hiểu nét/logo. Kiểm thử: python scripts/test_timeline_evidence.py.
+
+**Ghi nhớ:** Đầu ra timeline phải miêu tả rõ nét nào từ đâu tới đâu, điểm neo, góc, tốc độ và nhịp giữ, cùng phần observed/proposed. Bám **thứ tự** clip nhưng dựng geometry sạch hơn lỗi mẫu. Không đăng asset khách hàng vào repo public khi chưa có quyền phát hành. Giữ nguyên 42 cơ chế và các tests hiện có; đây là phụ lục vận hành, không phải thay thế.
