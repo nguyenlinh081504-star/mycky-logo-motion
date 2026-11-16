@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mycky Evidence-based Motion Timeline v3",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project",
+    "reference",
+    "target",
+    "phases",
+    "render",
+    "qa"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "3.0"
+    },
+    "project": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reference": {
+      "type": "object",
+      "required": [
+        "file",
+        "timeline_basis",
+        "frame_count",
+        "fps_nominal"
+      ],
+      "properties": {
+        "file": {
+          "type": "string"
+        },
+        "timeline_basis": {
+          "enum": [
+            "per-frame-pts",
+            "constant-frame-rate-verified",
+            "uncertain"
+          ]
+        },
+        "frame_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "fps_nominal": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "duration_s": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "target": {
+      "type": "object",
+      "required": [
+        "artwork_file",
+        "wordmark_in_reference"
+      ],
+      "properties": {
+        "artwork_file": {
+          "type": "string"
+        },
+        "wordmark_in_reference": {
+          "type": "boolean"
+        }
+      }
+    },
+    "phases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "start_s",
+          "end_s",
+          "evidence",
+          "owner",
+          "action",
+          "invariants",
+          "qa"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "start_s": {
+            "type": "number",
+            "minimum": 0
+          },
+          "end_s": {
+            "type": "number",
+            "minimum": 0
+          },
+          "evidence": {
+            "enum": [
+              "OBSERVED",
+              "INFERRED",
+              "PROPOSED",
+              "UNKNOWN"
+            ]
+          },
+          "owner": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string"
+          },
+          "source_pose": {
+            "type": "string"
+          },
+          "target_pose": {
+            "type": "string"
+          },
+          "geometry": {
+            "type": "string"
+          },
+          "invariants": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "qa": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "render": {
+      "type": "object",
+      "required": [
+        "width",
+        "height",
+        "fps"
+      ],
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "fps": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "duration_s": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "qa": {
+      "type": "object",
+      "required": [
+        "geometry",
+        "motion",
+        "delivery",
+        "visual_review"
+      ],
+      "properties": {
+        "geometry": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "PENDING"
+          ]
+        },
+        "motion": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "PENDING"
+          ]
+        },
+        "delivery": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "PENDING"
+          ]
+        },
+        "visual_review": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "PENDING"
+          ]
+        }
+      }
+    }
+  }
+}

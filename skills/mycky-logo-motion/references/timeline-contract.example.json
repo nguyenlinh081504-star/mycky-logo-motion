@@ -1,0 +1,104 @@
+{
+  "schema_version": "3.0",
+  "project": "DEMO (không phải dự án khách)",
+  "reference": {
+    "file": "references/sample.mp4",
+    "timeline_basis": "per-frame-pts",
+    "frame_count": 120,
+    "fps_nominal": 30,
+    "duration_s": 4
+  },
+  "target": {
+    "artwork_file": "assets/official.png",
+    "wordmark_in_reference": false
+  },
+  "phases": [
+    {
+      "id": "01-entry",
+      "start_s": 0,
+      "end_s": 0.5,
+      "evidence": "OBSERVED",
+      "owner": "glyph-original",
+      "action": "glyph đi vào giữ nguyên contour",
+      "source_pose": "fully offscreen",
+      "target_pose": "ink bbox centered",
+      "geometry": "rigid translation",
+      "invariants": [
+        "no font substitution",
+        "no nonuniform scale"
+      ],
+      "qa": [
+        "overlay original silhouette q0/q1"
+      ]
+    },
+    {
+      "id": "02-hold",
+      "start_s": 0.5,
+      "end_s": 1,
+      "evidence": "OBSERVED",
+      "owner": "glyph-original",
+      "action": "hold",
+      "invariants": [
+        "static frame"
+      ],
+      "qa": [
+        "no drift"
+      ]
+    },
+    {
+      "id": "03-morph",
+      "start_s": 1,
+      "end_s": 2.7,
+      "evidence": "INFERRED",
+      "owner": "semantic-strands",
+      "action": "morph theo anatomy từng strand",
+      "geometry": "matched cubic+width+junction",
+      "invariants": [
+        "counter/bridge preserved where required"
+      ],
+      "qa": [
+        "debug q0/q.25/q.5/q.75/q1"
+      ]
+    },
+    {
+      "id": "04-title",
+      "start_s": 2.7,
+      "end_s": 3.3,
+      "evidence": "PROPOSED",
+      "owner": "wordmark",
+      "action": "hiện artwork name sau khi icon hoàn chỉnh",
+      "invariants": [
+        "artwork intact"
+      ],
+      "qa": [
+        "final overlay"
+      ]
+    },
+    {
+      "id": "05-final-hold",
+      "start_s": 3.3,
+      "end_s": 4,
+      "evidence": "PROPOSED",
+      "owner": "parent",
+      "action": "hold toàn bộ logo",
+      "invariants": [
+        "no drift"
+      ],
+      "qa": [
+        "MP4 decoded final frame"
+      ]
+    }
+  ],
+  "render": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 60,
+    "duration_s": 4
+  },
+  "qa": {
+    "geometry": "PENDING",
+    "motion": "PENDING",
+    "delivery": "PENDING",
+    "visual_review": "PENDING"
+  }
+}
